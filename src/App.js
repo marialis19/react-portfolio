@@ -1,11 +1,13 @@
-import './App.css';
+import Header from "./components/Header/Header";
 
 function App() {
   return (
     <div>
-      <h1>Hola, soy Marialis 👋</h1>
-      <h2>Junior Full Stack Developer</h2>
-      <p>Este es mi portfolio profesional en React</p>
+      <Header 
+        name="Marialis Ayelen Aquino"
+        role="Junior Full Stack Developer"
+        stack="React · Python · REST APIs · Frontend"
+      />
     </div>
   );
 }
