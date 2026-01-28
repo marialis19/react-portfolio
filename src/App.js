@@ -1,4 +1,5 @@
 import Header from "./components/Header/Header";
+import About from "./components/About/About"; 
 
 function App() {
   return (
@@ -8,6 +9,8 @@ function App() {
         role="Junior Full Stack Developer"
         stack="React · Python · REST APIs · Frontend"
       />
+
+    <About />
     </div>
   );
 }
