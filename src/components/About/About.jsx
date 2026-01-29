@@ -21,7 +21,7 @@ function About () {
               </p>
             )}
 
-            <button onClick={() => setShowMore(!setShowMore)}>
+            <button onClick={() => setShowMore(!showMore)}>
                 {showMore ? "Mostrar menos" : "Mostrar más"}
             </button>
         </section>
