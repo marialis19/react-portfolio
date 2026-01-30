@@ -18,7 +18,7 @@ function App() {
     titulo: "ELPALOMAR",
     descripcion:
       "Sistema integral de gestión para un club deportivo. Proyecto Full Stack que evolucionó desde una maqueta estática hasta una arquitectura con frontend en Angular y backend en Django.",
-    tecnologias: "Angular · TypeScript · Django · Python · API REST · MySQL",
+    tecnologias: "Angular · Ts · Django · Python · API REST · MySQL",
     github: "https://github.com/El-palomar/ElPalomar",
     demo: "",
   },

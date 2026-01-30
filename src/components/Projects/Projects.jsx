@@ -1,31 +1,35 @@
+import "./Projects.css";
+
 function Projects({ projects }) {
   return (
-    <section>
+    <section className="projects">
       <h2>Proyectos</h2>
 
-      {projects.map((project) => (
-        <div key={project.id}>
-          <h3>{project.titulo}</h3>
+      <div className="projects-grid">
+        {projects.map((project) => (
+          <div key={project.id} className="project-card">
+            <h3>{project.titulo}</h3>
 
-          <p>{project.descripcion}</p>
+            <p>{project.descripcion}</p>
 
-          <small>{project.tecnologias}</small>
+            <small>{project.tecnologias}</small>
 
-          <div>
-            {project.github && (
-              <a href={project.github} target="_blank" rel="noreferrer">
-                GitHub
-              </a>
-            )}
+            <div className="project-links">
+              {project.github && (
+                <a href={project.github} target="_blank" rel="noreferrer">
+                  GitHub
+                </a>
+              )}
 
-            {project.demo && (
-              <a href={project.demo} target="_blank" rel="noreferrer">
-                Demo
-              </a>
-            )}
+              {project.demo && (
+                <a href={project.demo} target="_blank" rel="noreferrer">
+                  Demo
+                </a>
+              )}
+            </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </section>
   );
 }
