@@ -4,6 +4,8 @@ import Header from "./components/Header/Header";
 import About from "./components/About/About";
 import Projects from "./components/Projects/Projects";
 import Skills from "./components/Skills/Skills";
+import CVButton from "./components/CVButton/CVButton";
+import Contact from "./components/Contact/Contact";
 
 function App() {
   const [projects, setProjects] = useState([]);
@@ -56,6 +58,8 @@ function App() {
         stack="React · Angular · Flask · Django · REST APIs"
       />
 
+      <CVButton />
+
       <About />
       <Skills />
 
@@ -64,6 +68,8 @@ function App() {
       ) : (
         <Projects projects={projects} />
       )}
+      
+      <Contact />
     </div>
   );
 }
