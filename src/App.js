@@ -14,18 +14,33 @@ function App() {
     setTimeout(() => {
       setProjects([
         {
-          id: 1,
-          titulo: "Portfolio React",
-          descripcion: "Portfolio personal desarrollado con React",
-          tecnologias: "React, CSS",
-        },
-        {
-          id: 2,
-          titulo: "API con Flask",
-          descripcion: "API REST desarrollada con Flask.",
-          tecnologias: "Python, Flask",
-        },
-      ]);
+    id: 1,
+    titulo: "ELPALOMAR",
+    descripcion:
+      "Sistema integral de gestión para un club deportivo. Proyecto Full Stack que evolucionó desde una maqueta estática hasta una arquitectura con frontend en Angular y backend en Django.",
+    tecnologias: "Angular · TypeScript · Django · Python · API REST · MySQL",
+    github: "https://github.com/El-palomar/ElPalomar",
+    demo: "",
+  },
+  {
+    id: 2,
+    titulo: "Glamping – Cabañas Alpinas",
+    descripcion:
+      "Sitio web para un complejo de cabañas alpinas en las sierras de Córdoba, desarrollado con foco en diseño visual, estructura responsive y experiencia del usuario.",
+    tecnologias: "HTML · CSS · Bootstrap · JavaScript",
+    github: "https://github.com/marialis19/Glamping",
+    demo: "",
+  },
+  {
+    id: 3,
+    titulo: "Portfolio Web – React",
+    descripcion:
+      "Portfolio personal desarrollado con React para presentar proyectos y habilidades profesionales. Implementa componentes reutilizables, manejo de estado y preparación para consumo de APIs.",
+    tecnologias: "React · JavaScript · CSS · API REST",
+    github: "https://github.com/marialis19/react-portfolio",
+    demo: "",
+  },
+]);
 
       setLoading(false);  // cuando llegan los datos
     }, 1000);
@@ -36,9 +51,9 @@ function App() {
       <Navbar />
 
       <Header
-        name="Marialis Ayelen Aquino"
+        name="Marialis Ayelén Aquino"
         role="Junior Full Stack Developer"
-        stack="React · Python · APIs · Frontend"
+        stack="React · Angular · Flask · Django · REST APIs"
       />
 
       <About />

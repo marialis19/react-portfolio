@@ -4,11 +4,11 @@ function Skills() {
   const skillsData = [
     {
       category: "Frontend",
-      items: ["HTML", "CSS", "Bootstrap", "Angular", "TypeScript"],
+      items: ["HTML", "CSS", "Bootstrap", "React", "Angular y Ts"],
     },
     {
       category: "Backend",
-      items: ["Python", "Django", "MySQL", "API REST"],
+      items: ["Python", "Flask", "Django", "MySQL", "API REST"],
     },
     {
       category: "Herramientas",

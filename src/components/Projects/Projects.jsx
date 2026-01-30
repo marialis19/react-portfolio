@@ -1,19 +1,31 @@
-import "./Projects.css";
-
 function Projects({ projects }) {
   return (
-    <section className="projects" id="projects">
+    <section>
       <h2>Proyectos</h2>
 
-      <div className="projects-list">
-        {projects.map((project) => (
-          <div className="project-card" key={project.id}>
-            <h3>{project.titulo}</h3>
-            <p>{project.descripcion}</p>
-            <small>{project.tecnologias}</small>
+      {projects.map((project) => (
+        <div key={project.id}>
+          <h3>{project.titulo}</h3>
+
+          <p>{project.descripcion}</p>
+
+          <small>{project.tecnologias}</small>
+
+          <div>
+            {project.github && (
+              <a href={project.github} target="_blank" rel="noreferrer">
+                GitHub
+              </a>
+            )}
+
+            {project.demo && (
+              <a href={project.demo} target="_blank" rel="noreferrer">
+                Demo
+              </a>
+            )}
           </div>
-        ))}
-      </div>
+        </div>
+      ))}
     </section>
   );
 }

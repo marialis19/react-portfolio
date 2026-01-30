@@ -3,7 +3,7 @@ import "./Navbar.css";
 function Navbar() {
   return (
     <nav className="navbar">
-      <h2 className="logo">Marialis Aquino</h2>
+      <h2 className="logo">Full Stack Developer</h2>
 
       <ul className="nav-links">
         <li><a href="#about">Sobre mí</a></li>
