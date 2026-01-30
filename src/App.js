@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar/Navbar";
 import Header from "./components/Header/Header";
 import About from "./components/About/About";
 import Projects from "./components/Projects/Projects";
+import Skills from "./components/Skills/Skills";
 
 function App() {
   const [projects, setProjects] = useState([]);
@@ -41,6 +42,7 @@ function App() {
       />
 
       <About />
+      <Skills />
 
       {loading ? (
         <p>Cargando proyectos...</p>
