@@ -15,18 +15,18 @@ function App() {
       setProjects([
         {
     id: 1,
-    titulo: "ELPALOMAR",
+    titulo: "ELPALOMAR — Sistema de Gestión Deportiva",
     descripcion:
-      "Sistema integral de gestión para un club deportivo. Proyecto Full Stack que evolucionó desde una maqueta estática hasta una arquitectura con frontend en Angular y backend en Django.",
+      "Proyecto Full Stack que evolucionó desde una maqueta estática hasta el desarrollo frontend con Angular y backend con Django y API REST.",
     tecnologias: "Angular · Ts · Django · Python · API REST · MySQL",
     github: "https://github.com/El-palomar/ElPalomar",
     demo: "",
   },
   {
     id: 2,
-    titulo: "Glamping – Cabañas Alpinas",
+    titulo: "Glamping – Sitio Web Turístico",
     descripcion:
-      "Sitio web para un complejo de cabañas alpinas en las sierras de Córdoba, desarrollado con foco en diseño visual, estructura responsive y experiencia del usuario.",
+      "Sitio web responsive para un complejo de cabañas alpinas en las sierras de Córdoba, enfocado en diseño visual, estructura clara y experiencia del usuario.",
     tecnologias: "HTML · CSS · Bootstrap · JavaScript",
     github: "https://github.com/marialis19/Glamping",
     demo: "",
@@ -35,7 +35,7 @@ function App() {
     id: 3,
     titulo: "Portfolio Web – React",
     descripcion:
-      "Portfolio personal desarrollado con React para presentar proyectos y habilidades profesionales. Implementa componentes reutilizables, manejo de estado y preparación para consumo de APIs.",
+      "Portfolio profesional desarrollado con React. Implementa componentes reutilizables, manejo de estado y preparado para consumir datos de una API backend.",
     tecnologias: "React · JavaScript · CSS · API REST",
     github: "https://github.com/marialis19/react-portfolio",
     demo: "",
