@@ -26,7 +26,7 @@ function App() {
         },
       ]);
 
-      setLoading(false);  // 👈 cuando llegan los datos
+      setLoading(false);  // cuando llegan los datos
     }, 1000);
   }, []);
 
