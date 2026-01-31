@@ -5,10 +5,6 @@ function Contact() {
     <section className="contact" id="contact">
       <h2>Contacto</h2>
 
-      <p>
-        ¿Querés contactarme o conocer más sobre mi trabajo?
-      </p>
-
       <div className="contact-links">
         <a href="mailto:marialis1903@gmail.com">
           marialis1903@gmail.com
