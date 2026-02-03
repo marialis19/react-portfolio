@@ -44,3 +44,17 @@
   font-size: 0.95rem;
   color: var(--color-muted);
 }
+
+.skill-item {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 0.7rem;
+  font-size: 0.95rem;
+  color: var(--color-muted);
+}
+
+.skill-item i {
+  font-size: 1.1rem;
+  color: var(--color-primary);
+}
