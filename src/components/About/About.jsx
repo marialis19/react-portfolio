@@ -6,19 +6,22 @@ function About () {
 
     return (
         <section className="about" id="about">
-            <h2>About Me</h2>
+            <h2 className="section-title">About Me</h2>
 
             <p>
-              Soy desarrolladora Full Stack en formación, enfocada en crear aplicaciones web limpias,
-              funcionales y bien estructuradas.
+              Soy desarrolladora Full Stack en formación, con foco en el desarrollo de
+    aplicaciones web modernas, claras y bien estructuradas.
             </p>
 
             {showMore && (
               <p>
-               Trabajo principalmente en el frontend con React, Angular
-               creando interfaces claras y funcionales, y en backend con 
-               Flask, Django desarrollando APIs REST. Me interesa construir 
-               aplicaciones bien estructuradas, escalables y orientadas al usuario.
+                Trabajo principalmente en frontend con React y Angular, desarrollando
+                interfaces funcionales y orientadas al usuario, y en backend con Flask y
+                Django, creando APIs REST y lógica de negocio.
+              <br /><br />
+                Me interesa construir soluciones escalables, mantener buenas prácticas
+                de código y comprender el flujo completo de una aplicación, desde la
+                interfaz hasta la base de datos.
               </p>
             )}
 

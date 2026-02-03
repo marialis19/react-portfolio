@@ -2,8 +2,8 @@ import "./Projects.css";
 
 function Projects({ projects }) {
   return (
-    <section className="projects">
-      <h2>Proyectos</h2>
+    <section className="projects" id="projects">
+      <h2 className="section-title">Proyectos</h2>
 
       <div className="projects-grid">
         {projects.map((project) => (

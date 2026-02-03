@@ -1,19 +1,33 @@
 .cv-container {
   text-align: center;
-  margin: 3rem 0;
+  margin: 0.5rem;
 }
 
 .cv-button {
   display: inline-block;
-  padding: 0.8rem 1.5rem;
-  background-color: #222;
-  color: #fff;
+  padding: 0.75rem 1.6rem;
+
+  background-color: #d2c6f0;
+  color: var(--color-dark);
+
+  border: 1.5px solid var(--color-primary);
+  border-radius: 8px;
+
   text-decoration: none;
+  font-size: 0.95rem;
   font-weight: 500;
-  border-radius: 6px;
-  transition: background-color 0.3s ease;
+
+  transition:
+    background-color 0.25s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    color 0.2s ease;
 }
 
 .cv-button:hover {
-  background-color: #444;
+  background-color: #7725ebd1;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(119, 37, 235, 0.15);
 }
+

@@ -1,11 +1,20 @@
 .about {
-  max-width: 600px;
-  margin: 2rem auto;
+  max-width: 800px;
+  margin: 4rem auto;
+  padding: 0 1rem;
   text-align: center;
+}
+
+.about p {
+  color: var(--color-muted);
+  margin-bottom: 1rem;
 }
 
 .about button {
   margin-top: 1rem;
-  padding: 0.5rem 1rem;
+  background: none;
+  border: none;
+  color: var(--color-primary);
+  font-weight: 500;
   cursor: pointer;
 }
