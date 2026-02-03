@@ -26,7 +26,7 @@ function Skills() {
 
       <div className="skills-grid">
         {skillsData.map((skillGroup, index) => (
-          <div className="skill-card" key={index}>
+          <div className="card skill-card" key={index}>
             <h3>{skillGroup.category}</h3>
 
             <ul>

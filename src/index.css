@@ -1,14 +1,16 @@
 :root {
   /* Colores principales */
-  --color-primary: #7725eb;      /* azul profesional */
-  --color-dark: #1f2933;         /* títulos / navbar */
-  --color-text: #111827;         /* texto principal */
-  --color-muted: #6b7280;        /* texto secundario */
+  --color-primary: #7725eb;
+  --color-dark: #1f2933;
+  --color-text: #111827;
+  --color-muted: #6b7280;
 
   /* Fondos */
   --color-bg: #f9fafb;
-  --color-card: #ffffff;
-  --color-border: #e5e7eb;
+
+  /* Cards */
+  --color-card: #e1dbf46e;
+  --color-card-border: #ab8aec6f;
 }
 
 body {
@@ -25,10 +27,25 @@ h1, h2, h3 {
   color: var(--color-dark);
 }
 
+/* títulos de sección */
 .section-title {
   font-size: 2rem;
   font-weight: 600;
   color: var(--color-dark);
   text-align: center;
   margin-bottom: 2.5rem;
+}
+
+/* CARD GLOBAL */
+.card {
+  background-color: var(--color-card);
+  border: 1px solid var(--color-card-border);
+  border-radius: 12px;
+  padding: 1.8rem;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(119, 37, 235, 0.12);
 }
