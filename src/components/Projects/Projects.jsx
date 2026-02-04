@@ -23,7 +23,7 @@ function Projects({ projects }) {
 
               {project.demo && (
                 <a href={project.demo} target="_blank" rel="noreferrer">
-                  Demo
+                  Sitio Web
                 </a>
               )}
             </div>

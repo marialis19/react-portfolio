@@ -6,7 +6,7 @@ function About () {
 
     return (
         <section className="about" id="about">
-            <h2 className="section-title">About Me</h2>
+            <h2 className="section-title">Sobre Mí</h2>
 
             <p>
               Soy desarrolladora Full Stack en formación, con foco en el desarrollo de

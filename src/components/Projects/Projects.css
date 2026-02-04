@@ -28,9 +28,14 @@
 }
 
 .project-card small {
-  font-size: 0.8rem;
+  display: inline-block;
+  font-size: 0.75rem;
   color: var(--color-primary);
+  background-color: rgba(0, 0, 0, 0.04); /* o var soft */
+  padding: 0.3rem 0.6rem;
+  border-radius: 6px;
   margin-bottom: 1rem;
+  width: fit-content;
 }
 
 .project-links {
@@ -43,8 +48,11 @@
   text-decoration: none;
   color: var(--color-primary);
   font-weight: 500;
+  padding: 0.3rem 0.6rem;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
 }
 
 .project-links a:hover {
-  text-decoration: underline;
+  background-color: rgba(0, 0, 0, 0.05);
 }

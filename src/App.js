@@ -17,7 +17,7 @@ function App() {
       setProjects([
         {
     id: 1,
-    titulo: "ELPALOMAR — Sistema de Gestión Deportiva",
+    titulo: "El Palomar - Sistema de Gestión",
     descripcion:
       "Proyecto Full Stack que evolucionó desde una maqueta estática hasta el desarrollo frontend con Angular y backend con Django y API REST.",
     tecnologias: "Angular · Ts · Django · Python · API REST · MySQL",
@@ -26,16 +26,15 @@ function App() {
   },
   {
     id: 2,
-    titulo: "Glamping – Sitio Web Turístico",
+    titulo: "Glamping - Sitio Web Turístico",
     descripcion:
       "Sitio web responsive para un complejo de cabañas alpinas en las sierras de Córdoba, enfocado en diseño visual, estructura clara y experiencia del usuario.",
     tecnologias: "HTML · CSS · Bootstrap · JavaScript",
-    github: "https://github.com/marialis19/Glamping",
-    demo: "",
+    demo: "https://lacuestaglamping.com/web/views/index.html",
   },
   {
     id: 3,
-    titulo: "Portfolio Web – React",
+    titulo: "Portfolio Web - React",
     descripcion:
       "Portfolio profesional desarrollado con React. Implementa componentes reutilizables, manejo de estado y preparado para consumir datos de una API backend.",
     tecnologias: "React · JavaScript · CSS · API REST",

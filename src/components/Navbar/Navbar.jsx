@@ -1,14 +1,30 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import "./Navbar.css";
 
 function Navbar() {
   const [open, setOpen] = useState(false);
+  const navRef = useRef(null);
+
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (navRef.current && !navRef.current.contains(e.target)) {
+        setOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
 
   return (
-    <nav className="navbar">
+    <nav className="navbar" ref={navRef}>
       <h2 className="logo">Full Stack Developer</h2>
 
-      <button className="menu-btn" onClick={() => setOpen(!open)}>
+      <button
+        className="menu-btn"
+        onClick={() => setOpen(!open)}
+        aria-label="Abrir menú"
+      >
         ☰
       </button>
 

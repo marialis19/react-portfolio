@@ -11,11 +11,13 @@ function Contact() {
           target="_blank"
           rel="noreferrer"
         >
-          LinkedIn
+          <i className="devicon-linkedin-plain"></i>
+          <span>LinkedIn</span>
         </a>
 
         <a href="mailto:marialis1903@gmail.com">
-          marialis1903@gmail.com
+          <span className="mail-icon">@</span>
+          <span>marialis1903@gmail.com</span>
         </a>
 
         <a
@@ -23,9 +25,14 @@ function Contact() {
           target="_blank"
           rel="noreferrer"
         >
-          GitHub
+          <i className="devicon-github-original"></i>
+          <span>GitHub</span>
         </a>
       </div>
+
+      <p className="contact-footer">
+        © {new Date().getFullYear()} Marialis Aquino · Portfolio personal
+      </p>
     </section>
   );
 }

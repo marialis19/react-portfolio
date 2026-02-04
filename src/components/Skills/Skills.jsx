@@ -44,7 +44,7 @@ function Skills() {
 
   return (
     <section className="skills" id="skills">
-      <h2 className="section-title">Habilidades</h2>
+      <h2 className="section-title">Skills</h2>
 
       <div className="skills-grid">
         {skillsData.map((skillGroup, index) => (
