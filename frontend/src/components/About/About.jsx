@@ -1,35 +1,41 @@
 import { useState } from "react";
 import "./About.css";
 
-function About () {
-    const [showMore, setShowMore] = useState(false);
+function About({ data }) {
+  const [showMore, setShowMore] = useState(false);
 
+  // mientras llega la data
+  if (!data) {
     return (
-        <section className="about" id="about">
-            <h2 className="section-title">Sobre Mí</h2>
+      <section className="about" id="about">
+        <p>Cargando información...</p>
+      </section>
+    );
+  }
 
-            <p>
-              Soy desarrolladora Full Stack en formación, con foco en el desarrollo de
-    aplicaciones web modernas, claras y bien estructuradas.
-            </p>
+  return (
+    <section className="about" id="about">
+      <h2 className="section-title">{data.title}</h2>
 
-            {showMore && (
-              <p>
-                Trabajo principalmente en frontend con React y Angular, desarrollando
-                interfaces funcionales y orientadas al usuario, y en backend con Flask y
-                Django, creando APIs REST y lógica de negocio.
-              <br /><br />
-                Me interesa construir soluciones escalables, mantener buenas prácticas
-                de código y comprender el flujo completo de una aplicación, desde la
-                interfaz hasta la base de datos.
-              </p>
-            )}
+      <p>{data.intro}</p>
 
-            <button onClick={() => setShowMore(!showMore)}>
-                {showMore ? "Mostrar menos" : "Mostrar más"}
-            </button>
-        </section>
-    )
+      {showMore && (
+        <p>
+          {data.details.split("\n\n").map((paragraph, index) => (
+            <span key={index}>
+              {paragraph}
+              <br />
+              <br />
+            </span>
+          ))}
+        </p>
+      )}
+
+      <button onClick={() => setShowMore(!showMore)}>
+        {showMore ? "Mostrar menos" : "Mostrar más"}
+      </button>
+    </section>
+  );
 }
 
 export default About;

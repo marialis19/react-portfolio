@@ -1,37 +1,39 @@
 import "./Contact.css";
 
-function Contact() {
+function Contact({ data }) {
+  if (!data) return null;
+
   return (
     <section className="contact" id="contact">
-      <h2 className="section-title">Contacto</h2>
+      <h2 className="section-title">{data.title}</h2>
 
       <div className="contact-links">
         <a
-          href="https://www.linkedin.com/in/marialis-aquino"
+          href={data.linkedin.url}
           target="_blank"
           rel="noreferrer"
         >
           <i className="devicon-linkedin-plain"></i>
-          <span>LinkedIn</span>
+          <span>{data.linkedin.label}</span>
         </a>
 
-        <a href="mailto:marialis1903@gmail.com">
+        <a href={`mailto:${data.email.address}`}>
           <span className="mail-icon">@</span>
-          <span>marialis1903@gmail.com</span>
+          <span>{data.email.address}</span>
         </a>
 
         <a
-          href="https://github.com/marialis19"
+          href={data.github.url}
           target="_blank"
           rel="noreferrer"
         >
           <i className="devicon-github-original"></i>
-          <span>GitHub</span>
+          <span>{data.github.label}</span>
         </a>
       </div>
 
       <p className="contact-footer">
-        © {new Date().getFullYear()} Marialis Aquino · Portfolio personal
+        © {new Date().getFullYear()} Marialis Aquino · {data.footer}
       </p>
     </section>
   );

@@ -8,67 +8,88 @@ import CVButton from "./components/CVButton/CVButton";
 import Contact from "./components/Contact/Contact";
 
 function App() {
+  const [skills, setSkills] = useState([]);
   const [projects, setProjects] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [aboutData, setAboutData] = useState(null);
+  const [headerData, setHeaderData] = useState(null);
+  const [contactData, setContactData] = useState(null);
 
   useEffect(() => {
-    // simulamos una llamada a API
-    setTimeout(() => {
-      setProjects([
-        {
-    id: 1,
-    titulo: "El Palomar - Sistema de Gestión",
-    descripcion:
-      "Proyecto Full Stack que evolucionó desde una maqueta estática hasta el desarrollo frontend con Angular y backend con Django y API REST.",
-    tecnologias: "Angular · Ts · Django · Python · API REST · MySQL",
-    github: "https://github.com/El-palomar/ElPalomar",
-    demo: "",
-  },
-  {
-    id: 2,
-    titulo: "Glamping - Sitio Web Turístico",
-    descripcion:
-      "Sitio web responsive para un complejo de cabañas alpinas en las sierras de Córdoba, enfocado en diseño visual, estructura clara y experiencia del usuario.",
-    tecnologias: "HTML · CSS · Bootstrap · JavaScript",
-    demo: "https://lacuestaglamping.com/web/views/index.html",
-  },
-  {
-    id: 3,
-    titulo: "Portfolio Web - React",
-    descripcion:
-      "Portfolio profesional desarrollado con React. Implementa componentes reutilizables, manejo de estado y preparado para consumir datos de una API backend.",
-    tecnologias: "React · JavaScript · CSS · API REST",
-    github: "https://github.com/marialis19/react-portfolio",
-    demo: "",
-  },
-]);
+    fetch("http://127.0.0.1:5000/api/projects")
+      .then((res) => res.json())
+      .then((data) => {
+        setProjects(data);
+        setLoading(false);
+      })
+      .catch((error) => {
+        console.error("Error al traer proyectos:", error);
+        setLoading(false);
+      });
+      
+    fetch("http://127.0.0.1:5000/api/skills")
+      .then((res) => res.json())
+      .then((data) => {
+        setSkills(data);
+      })
+    .catch((error) => {
+      console.error("Error al cargar skills:", error);
+      });
 
-      setLoading(false);  // cuando llegan los datos
-    }, 1000);
+    fetch("http://127.0.0.1:5000/api/about")
+      .then((res) => res.json())
+      .then((data) => {
+        setAboutData(data);
+      })
+    .catch((error) => {
+      console.error("Error al cargar about:", error);
+      });
+
+    fetch("http://127.0.0.1:5000/api/header")
+      .then((res) => res.json())
+      .then((data) => {
+        setHeaderData(data);
+      })
+    .catch((error) => {
+       console.error("Error al cargar header:", error);
+      });
+
+    fetch("http://127.0.0.1:5000/api/contact")
+      .then((res) => res.json())
+      .then((data) => {
+        setContactData(data);
+    })
+   .catch((error) => {
+      console.error("Error al cargar contacto:", error);
+    });
+
   }, []);
 
   return (
     <div>
       <Navbar />
 
-      <Header
-        name="Marialis Ayelén Aquino"
-        role="Junior Full Stack Developer"
-        stack="React · Angular · Flask · Django · REST APIs"
-      />
+      {headerData && (
+        <Header
+          name={headerData.name}
+          role={headerData.role}
+          stack={headerData.stack}
+        />
+      )}
 
       <CVButton />
 
-      <About />
-      <Skills />
+      <About data={aboutData} />
+
+      <Skills skills={skills} />
 
       {loading ? (
         <p>Cargando proyectos...</p>
       ) : (
         <Projects projects={projects} />
       )}
-      
-      <Contact />
+
+      {contactData && <Contact data={contactData} />}
     </div>
   );
 }
