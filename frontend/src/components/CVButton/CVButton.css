@@ -1,6 +1,10 @@
 .cv-container {
-  text-align: center;
-  margin: 0.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0.5rem 2rem;
+
+  display: flex;
+  justify-content: center; /* 📱 default: centrado */
 }
 
 .cv-button {
@@ -30,4 +34,12 @@
   transform: translateY(-2px);
   box-shadow: 0 6px 18px rgba(119, 37, 235, 0.15);
 }
+
+@media (min-width: 768px) {
+  .cv-container {
+    justify-content: flex-start; /* 💻 izquierda */
+    margin-top: -2.5rem;/* 👈 lo acerca al header */
+  }
+}
+
 
