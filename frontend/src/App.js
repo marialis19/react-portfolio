@@ -7,6 +7,9 @@ import Skills from "./components/Skills/Skills";
 import CVButton from "./components/CVButton/CVButton";
 import Contact from "./components/Contact/Contact";
 
+// 👉 Backend en producción (Render)
+const API_URL = "https://react-portfolio-backend-i2ff.onrender.com";
+
 function App() {
   const [skills, setSkills] = useState([]);
   const [projects, setProjects] = useState([]);
@@ -16,7 +19,7 @@ function App() {
   const [contactData, setContactData] = useState(null);
 
   useEffect(() => {
-    fetch("http://127.0.0.1:5000/api/projects")
+    fetch(`${API_URL}/api/projects`)
       .then((res) => res.json())
       .then((data) => {
         setProjects(data);
@@ -26,43 +29,34 @@ function App() {
         console.error("Error al traer proyectos:", error);
         setLoading(false);
       });
-      
-    fetch("http://127.0.0.1:5000/api/skills")
+
+    fetch(`${API_URL}/api/skills`)
       .then((res) => res.json())
-      .then((data) => {
-        setSkills(data);
-      })
-    .catch((error) => {
-      console.error("Error al cargar skills:", error);
+      .then((data) => setSkills(data))
+      .catch((error) => {
+        console.error("Error al cargar skills:", error);
       });
 
-    fetch("http://127.0.0.1:5000/api/about")
+    fetch(`${API_URL}/api/about`)
       .then((res) => res.json())
-      .then((data) => {
-        setAboutData(data);
-      })
-    .catch((error) => {
-      console.error("Error al cargar about:", error);
+      .then((data) => setAboutData(data))
+      .catch((error) => {
+        console.error("Error al cargar about:", error);
       });
 
-    fetch("http://127.0.0.1:5000/api/header")
+    fetch(`${API_URL}/api/header`)
       .then((res) => res.json())
-      .then((data) => {
-        setHeaderData(data);
-      })
-    .catch((error) => {
-       console.error("Error al cargar header:", error);
+      .then((data) => setHeaderData(data))
+      .catch((error) => {
+        console.error("Error al cargar header:", error);
       });
 
-    fetch("http://127.0.0.1:5000/api/contact")
+    fetch(`${API_URL}/api/contact`)
       .then((res) => res.json())
-      .then((data) => {
-        setContactData(data);
-    })
-   .catch((error) => {
-      console.error("Error al cargar contacto:", error);
-    });
-
+      .then((data) => setContactData(data))
+      .catch((error) => {
+        console.error("Error al cargar contacto:", error);
+      });
   }, []);
 
   return (
