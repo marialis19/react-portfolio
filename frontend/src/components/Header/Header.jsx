@@ -11,7 +11,8 @@ function Header({ name, role, stack }) {
         </div>
 
         <div className="header-image">
-          <img src="/perfil_cv.png" alt="Foto de perfil" />
+          <img src= {`${process.env.PUBLIC_URL}/perfil_cv.png`}
+  alt="Foto de perfil"/>
         </div>
       </div>
     </header>
